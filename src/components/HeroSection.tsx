@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import heroImage from "@/assets/hero-image.jpg";
+import biiLogo from "@/assets/bii-logo.png";
+import betterplaceLogo from "@/assets/betterplace-logo.png";
 import { Button } from "@/components/ui/button";
 
-const REGISTER_URL = "#register"; // Replace with actual registration URL
+const REGISTER_URL = "#register";
 
 const HeroSection = () => (
   <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-    {/* Background image with overlay */}
     <div className="absolute inset-0">
       <img src={heroImage} alt="Diverse frontline workforce" className="w-full h-full object-cover" />
       <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/75 to-primary/40" />
@@ -19,8 +20,13 @@ const HeroSection = () => (
         transition={{ duration: 0.8 }}
         className="max-w-2xl"
       >
+        <div className="flex items-center gap-4 mb-6">
+          <img src={betterplaceLogo} alt="BetterPlace" className="h-8 md:h-10 brightness-0 invert" />
+          <span className="text-primary-foreground/60 text-2xl font-light">×</span>
+          <img src={biiLogo} alt="British International Investment" className="h-8 md:h-10 brightness-0 invert" />
+        </div>
         <p className="text-primary-foreground/80 font-sans text-sm font-semibold uppercase tracking-widest mb-4">
-          An Initiative by BetterPlace & British International Investment
+          A Joint Initiative by BetterPlace & British International Investment
         </p>
         <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-primary-foreground leading-tight mb-6">
           Advancing Gender Inclusivity in the Frontline Workforce
