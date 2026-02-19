@@ -70,8 +70,9 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
           >
             <form
+              id="register-form"
               onSubmit={handleSubmit}
-              className="bg-card/95 backdrop-blur-md rounded-2xl p-8 shadow-2xl border border-border/50"
+              className="bg-card/95 backdrop-blur-md rounded-2xl p-8 shadow-2xl border border-border/50 scroll-mt-24"
             >
               <h3 className="font-display text-2xl text-foreground mb-2">Register for the Masterclass</h3>
               <p className="text-muted-foreground text-sm mb-6">Free access · 10 modules · Get certified</p>
