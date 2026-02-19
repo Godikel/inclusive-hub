@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
-const REGISTER_URL = "#register"; // Replace with actual registration URL
+const REGISTER_URL = "#register-form";
 
 const CTASection = () => (
   <section className="py-24">
