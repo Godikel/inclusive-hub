@@ -46,7 +46,7 @@ const HeroSection = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="flex items-center gap-4 mb-6">
-              <img src={betterplaceLogo} alt="BetterPlace" className="h-8 md:h-10 brightness-0 invert" />
+              <img src={betterplaceLogo} alt="BetterPlace" className="h-10 md:h-14 brightness-0 invert" />
               <span className="text-primary-foreground/60 text-2xl font-light">×</span>
               <img src={biiLogo} alt="British International Investment" className="h-8 md:h-10 brightness-0 invert" />
             </div>
