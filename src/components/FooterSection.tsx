@@ -5,7 +5,7 @@ const FooterSection = () => (
   <footer className="py-10 border-t border-border">
     <div className="container text-center">
       <div className="flex items-center justify-center gap-6 mb-4">
-        <img src={betterplaceLogo} alt="BetterPlace" className="h-8" />
+        <img src={betterplaceLogo} alt="BetterPlace" className="h-10 md:h-14" />
         <span className="text-muted-foreground text-xl font-light">×</span>
         <img src={biiLogo} alt="British International Investment" className="h-8" />
       </div>
