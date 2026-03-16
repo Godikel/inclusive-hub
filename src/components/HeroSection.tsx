@@ -18,18 +18,29 @@ const HeroSection = () => {
     setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.firstName || !form.email || !form.phone) {
       toast({ title: "Please fill all required fields", variant: "destructive" });
       return;
     }
     setSubmitting(true);
-    setTimeout(() => {
+    try {
+      const { error } = await supabase.from("registrations").insert({
+        first_name: form.firstName,
+        last_name: form.lastName || null,
+        email: form.email,
+        phone: form.phone,
+        company: form.company || null,
+      });
+      if (error) throw error;
       toast({ title: "Registration successful!", description: "We'll be in touch soon." });
       setForm({ firstName: "", lastName: "", email: "", phone: "", company: "" });
+    } catch (err: any) {
+      toast({ title: "Registration failed", description: err.message, variant: "destructive" });
+    } finally {
       setSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
